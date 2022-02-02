@@ -4,9 +4,10 @@ React app starter template with parcel build setup
 
 ## Stack
 
+- Typescript
 - Parcel 2
 - React 17
-- Typescript
+- Emotion
 - Storybook
-- Jest unit tests
+- React Testing Library unit tests
 - Linting with eslint
