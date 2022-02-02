@@ -13,5 +13,5 @@ export const HelloWorld: React.FC<HelloWorldProps> = ({greetings = 'Jane'}) => {
 };
 
 if (process.env.NODE_ENV !== 'production') {
-  HelloWorld.displayName = 'Button';
+  HelloWorld.displayName = 'HelloWorld';
 }

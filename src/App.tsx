@@ -1,14 +1,19 @@
 /** @jsxImportSource @emotion/react */
-import Layout from './components/Layout';
-import * as styles from './App.styles';
+import GlobalStyles from "./components/GlobalStyles";
+import PageLayout from "./components/PageLayout";
+import Providers from "./providers";
+import { Fragment } from "react";
 
 const App = () => {
   return (
-    <Layout>
-      <div css={styles.app}>
-        <main css={styles.main}>Parcel React App</main>
-      </div>
-    </Layout>
+    <Fragment>
+      <GlobalStyles />
+      <Providers>
+        <PageLayout>
+          <div css={{ fontSize: 36, color: "#363945" }}>Parcel React App</div>
+        </PageLayout>
+      </Providers>
+    </Fragment>
   );
 };
 

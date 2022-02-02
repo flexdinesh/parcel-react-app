@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import { Global } from '@emotion/react';
-import Providers from '../providers';
+import { Global } from "@emotion/react";
 
-const Layout: React.FC = ({ children }) => {
+/* global styles, css reset, web font loading happen here */
+const GlobalStyles: React.FC = () => {
   return (
     <>
       <Global
@@ -17,9 +17,12 @@ const Layout: React.FC = ({ children }) => {
           }
       `}
       />
-      <Providers>{children}</Providers>
     </>
   );
 };
 
-export default Layout;
+if (process.env.NODE_ENV !== "production") {
+  GlobalStyles.displayName = "GlobalStyles";
+}
+
+export default GlobalStyles;
