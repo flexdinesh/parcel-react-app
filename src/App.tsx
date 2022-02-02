@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import GlobalStyles from "./components/GlobalStyles";
-import PageLayout from "./components/PageLayout";
-import Providers from "./providers";
-import { Fragment } from "react";
+import GlobalStyles from './components/GlobalStyles';
+import PageLayout from './components/PageLayout';
+import Providers from './providers';
+import { Fragment } from 'react';
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <GlobalStyles />
       <Providers>
         <PageLayout>
-          <div css={{ fontSize: 36, color: "#363945" }}>Parcel React App</div>
+          <div css={{ fontSize: 36, color: '#363945' }}>Parcel React App</div>
         </PageLayout>
       </Providers>
     </Fragment>

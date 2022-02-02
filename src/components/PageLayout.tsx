@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 const styles = {
   app: css`
@@ -22,8 +22,8 @@ const PageLayout: React.FC = ({ children }) => {
   );
 };
 
-if (process.env.NODE_ENV !== "production") {
-  PageLayout.displayName = "PageLayout";
+if (process.env.NODE_ENV !== 'production') {
+  PageLayout.displayName = 'PageLayout';
 }
 
 export default PageLayout;

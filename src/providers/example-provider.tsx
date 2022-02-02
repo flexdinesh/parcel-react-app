@@ -4,7 +4,7 @@ import {
   useCallback,
   useMemo,
   useContext,
-} from "react";
+} from 'react';
 
 type ExampleContext = {
   name: string;
@@ -16,7 +16,7 @@ const ExampleContext = createContext<ExampleContext>(
 );
 
 export const ExampleProvider: React.FC = ({ children }) => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
 
   const changeName = useCallback(
     (n: string) => {
@@ -41,7 +41,7 @@ export const useExample = () => {
     typeof exampleContext.name === undefined ||
     typeof exampleContext.changeName === undefined
   ) {
-    throw new Error("ExampleProvider is not wrapped in the tree");
+    throw new Error('ExampleProvider is not wrapped in the tree');
   }
 
   return exampleContext;

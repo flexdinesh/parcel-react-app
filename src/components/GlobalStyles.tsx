@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { Global } from "@emotion/react";
+import { Global } from '@emotion/react';
 
 /* global styles, css reset, web font loading happen here */
 const GlobalStyles: React.FC = () => {
@@ -21,8 +21,8 @@ const GlobalStyles: React.FC = () => {
   );
 };
 
-if (process.env.NODE_ENV !== "production") {
-  GlobalStyles.displayName = "GlobalStyles";
+if (process.env.NODE_ENV !== 'production') {
+  GlobalStyles.displayName = 'GlobalStyles';
 }
 
 export default GlobalStyles;
