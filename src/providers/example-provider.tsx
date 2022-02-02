@@ -5,8 +5,8 @@ type ExampleContext = {
   changeName: (n: string) => void;
 };
 
-const ExampleContext = React.createContext<ExampleContext>(
-  {} as unknown as ExampleContext
+export const ExampleContext = React.createContext<ExampleContext>(
+  undefined as unknown as ExampleContext
 );
 
 export const ExampleProvider: React.FC = ({ children }) => {
@@ -32,10 +32,7 @@ export const ExampleProvider: React.FC = ({ children }) => {
 
 export const useExample = () => {
   const exampleContext = React.useContext(ExampleContext);
-  if (
-    typeof exampleContext.name === undefined ||
-    typeof exampleContext.changeName === undefined
-  ) {
+  if (typeof exampleContext === undefined) {
     throw new Error('ExampleProvider is not wrapped in the tree');
   }
 
