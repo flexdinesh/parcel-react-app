@@ -1,30 +1,25 @@
-import {
-  createContext,
-  useState,
-  useCallback,
-  useMemo,
-  useContext,
-} from 'react';
+import React from 'react';
 
 type ExampleContext = {
   name: string;
   changeName: (n: string) => void;
 };
 
-const ExampleContext = createContext<ExampleContext>(
+const ExampleContext = React.createContext<ExampleContext>(
   {} as unknown as ExampleContext
 );
 
 export const ExampleProvider: React.FC = ({ children }) => {
-  const [name, setName] = useState('');
+  const [name, setName] = React.useState('');
 
-  const changeName = useCallback(
+  const changeName = React.useCallback(
     (n: string) => {
       setName(n);
     },
     [setName]
   );
-  const contextValue = useMemo(() => {
+
+  const contextValue = React.useMemo(() => {
     return { name, changeName };
   }, [name, changeName]);
 
@@ -36,7 +31,7 @@ export const ExampleProvider: React.FC = ({ children }) => {
 };
 
 export const useExample = () => {
-  const exampleContext = useContext(ExampleContext);
+  const exampleContext = React.useContext(ExampleContext);
   if (
     typeof exampleContext.name === undefined ||
     typeof exampleContext.changeName === undefined
