@@ -14,7 +14,7 @@ const styles = {
   `,
 };
 
-const PageLayout: React.FC = ({ children }) => {
+export const PageLayout: React.FC = ({ children }) => {
   return (
     <div css={styles.app}>
       <main css={styles.main}>{children}</main>
@@ -25,5 +25,3 @@ const PageLayout: React.FC = ({ children }) => {
 if (process.env.NODE_ENV !== 'production') {
   PageLayout.displayName = 'PageLayout';
 }
-
-export default PageLayout;

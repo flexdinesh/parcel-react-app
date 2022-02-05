@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
-import GlobalStyles from './components/GlobalStyles';
-import PageLayout from './components/PageLayout';
-import Providers from './providers';
+import { GlobalStyles } from './components/global-styles';
+import { PageLayout } from './components/page-layout';
+import { Providers } from './providers';
 import { Fragment } from 'react';
 
-const App = () => {
+export const App = () => {
   return (
     <Fragment>
       <GlobalStyles />
@@ -16,5 +16,3 @@ const App = () => {
     </Fragment>
   );
 };
-
-export default App;

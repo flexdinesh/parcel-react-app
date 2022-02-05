@@ -2,7 +2,7 @@
 import { Global } from '@emotion/react';
 
 /* global styles, css reset, web font loading happen here */
-const GlobalStyles: React.FC = () => {
+export const GlobalStyles: React.FC = () => {
   return (
     <>
       <Global
@@ -24,5 +24,3 @@ const GlobalStyles: React.FC = () => {
 if (process.env.NODE_ENV !== 'production') {
   GlobalStyles.displayName = 'GlobalStyles';
 }
-
-export default GlobalStyles;
